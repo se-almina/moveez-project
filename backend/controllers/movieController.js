@@ -7,8 +7,13 @@ const getMovies = async (req, res) => {
 
   res.status(200).json(movies)
 }
+//get a single movie 
+const getSingleMovie = async (req, res) => {
+  const movies = await Movie.find({}).limit(1);
 
-// get a single movie
+  res.status(200).json(movies)
+}
+// get a single movie by id 
 const getMovie = async (req, res) => {
   const { id } = req.params
 
@@ -27,10 +32,10 @@ const getMovie = async (req, res) => {
 
 // create a new movie
 const createMovie = async (req, res) => {
-  const {title, director, cast, dateAndTimeOfProjection} = req.body
+  const {title, director, cast, dateAndTimeOfProjection, durationH, durationM} = req.body
   
   try {
-    const movie = await Movie.create({title, director, cast, dateAndTimeOfProjection})
+    const movie = await Movie.create({title, director, cast, dateAndTimeOfProjection, durationH, durationM})
     res.status(200).json(movie)
   } catch (error) {
     res.status(400).json({error: error.message})
@@ -75,6 +80,7 @@ const updateMovie = async (req, res) => {
 
 module.exports = {
   getMovies,
+  getSingleMovie,
   getMovie,
   createMovie,
   deleteMovie,

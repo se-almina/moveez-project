@@ -1,9 +1,23 @@
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";  
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <div>Hello</div>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
     </div>
   );
 }

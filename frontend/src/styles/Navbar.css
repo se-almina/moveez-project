@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem;
+}
+
+.container{
+    display: flex;
+}
+
+.name{
+    padding-left: 12rem;
+    font-family: 'Ysabeau';
+    font-weight: 600;
+    text-indent: 5%;
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.container form {
+    padding-left: 10rem;
+    
+}
+.container input {
+    border: none; 
+    border:solid 1px #ccc;
+    border-radius: 20px;
+    width: 17rem;
+    height: 2rem;
+    padding-left: 18px;
+}
+.profile{
+    padding-right: 4rem;
+    font-size: 1.35rem;
+}
+
+::placeholder{
+    color: lightgray;
+}

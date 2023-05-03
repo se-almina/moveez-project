@@ -18,6 +18,14 @@ const movieSchema = new Schema({
   dateAndTimeOfProjection: {
     type: Date,
     required: true
+  },
+  durationH: {
+    type: Number,
+    required: true
+  },
+  durationM: {
+    type: Number,
+    required: true
   }
 }, { timestamps: true })
 

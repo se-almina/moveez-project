@@ -1,0 +1,7 @@
+.allmovies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0rem 6rem 0rem 6rem;
+    grid-column-gap: 43px
+
+}

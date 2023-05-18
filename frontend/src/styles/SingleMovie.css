@@ -1,3 +1,7 @@
+.single-movie{
+    height: 26rem;
+}
+
 .single-movie img{
     height: 25rem;
     width: 85rem;
@@ -5,16 +9,18 @@
     border-radius: 30px;
 }
 
-.container2{
+.cont2{
     margin: 3rem 5rem 5rem 5rem;
     
 }
+.movie-details{
+    padding-top: 6rem;
+    position: relative;
+}
 
 .movie-info{
-    position: relative;
     height: 12rem;
     width: 38rem;
-    padding-top: 8rem;
     padding-left: 4rem;
 }
 
@@ -34,13 +40,13 @@
     padding-top: 1rem;
 }
 
-.watch-button{
-    position: relative;
+.watch-bttn{
     padding-left: 4rem;
+    padding-top: 1.5rem;
 
 }
 
-.watch-button button{
+.watch-bttn button{
     background: black;
     color: white;
     width: 9rem;

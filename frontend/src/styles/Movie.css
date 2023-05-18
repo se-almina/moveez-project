@@ -1,0 +1,11 @@
+.card button{
+    background: black;
+    color: white;
+    width: 9rem;
+    height: 2rem;
+    border-radius: 8px;
+    font-family: 'Ysabeau';
+    font-weight: 500;
+    font-size: 16px;
+    border:0;
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import MoviePage from './pages/MoviePage';
 import {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/movies/:id" element={<MoviePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

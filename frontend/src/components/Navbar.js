@@ -6,14 +6,14 @@ export default function Navbar() {
     return (
         <div className='navbar'>
             <div className='container'>
-            <div className='name'>MOVEEZ</div>
-            <div>
-                <form>
-                    <input type='text' placeholder='Search'></input>
-                </form>
+                <div className='name'>MOVEEZ</div>
+                <div>
+                    <form>
+                        <input type='text' placeholder='Search'></input>
+                    </form>
+                </div>
             </div>
-            </div>
-            <div className='profile'><BsFillPersonFill/></div>
+            <div className='profile'><BsFillPersonFill /></div>
         </div>
     )
 }

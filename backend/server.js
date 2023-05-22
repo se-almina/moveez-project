@@ -18,6 +18,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/movies', movieRoutes)
 
+
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {

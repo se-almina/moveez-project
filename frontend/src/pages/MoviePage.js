@@ -10,7 +10,7 @@ export default function MoviePage(props) {
 
     useEffect(() => {
         const fetchMovie = async () => {
-            const response = await fetch(`/movies/${id}`)
+            const response = await fetch(`https://moveez-r9ei.onrender.com/movies/${id}`)
             const data = await response.json()
 
             if (response.ok) {

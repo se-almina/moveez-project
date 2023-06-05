@@ -2,8 +2,11 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const multer=require('multer')
 const movieRoutes = require('./routes/movie')
 const cors= require('cors');
+const path = require('path');
+
 
 
 // express app
@@ -12,7 +15,11 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use(cors());
+const backendDir = path.join(__dirname, 'backend'); // Set backend directory path
+const frontendDir = path.join(__dirname, 'frontend/src'); // Set frontend directory path
 
+// Serve static files from the "frontend" folder
+app.use(express.static(frontendDir));
 
 app.use((req, res, next) => {
   console.log(req.path, req.method)

@@ -1,5 +1,18 @@
 const Movie = require('../models/movieModel')
 const mongoose = require('mongoose')
+const multer=require('multer')
+
+
+const Storage=multer.diskStorage({
+  destination: "../frontend/src/uploads",
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload= multer( {
+  storage:Storage
+}).single('image');
 
 // get all movies
 const getMovies = async (req, res) => {
@@ -32,14 +45,27 @@ const getMovie = async (req, res) => {
 
 // create a new movie
 const createMovie = async (req, res) => {
-  const {title, director, cast, dateAndTimeOfProjection, durationH, durationM} = req.body
-  
-  try {
-    const movie = await Movie.create({title, director, cast, dateAndTimeOfProjection, durationH, durationM})
-    res.status(200).json(movie)
-  } catch (error) {
-    res.status(400).json({error: error.message})
-  }
+  upload(req, res,(err)=> {
+    if(err){
+      console.log(err)
+    } else{
+      const newMovie=new Movie( {
+        title: req.body.title, 
+        director: req.body.director,
+        cast: req.body.cast,
+        dateAndTimeOfProjection: req.body.dateAndTimeOfProjection,
+        durationH: req.body.durationH,
+        durationM: req.body.durationM,
+        image: {
+          data:req.file.filename,
+          contentType:'image/png',
+          name:req.file.filename
+        }
+
+      })
+      newMovie.save().then(()=>res.send('successfully uploaded'))
+    }
+  })
 }
 
 // delete a movie

@@ -8,7 +8,7 @@ export default function SingleMovie(props) {
     return (
         <div className='single-movie'>
             <div className='cont2'>
-                <img src={`../uploads/${props.image.name}`} /> 
+                <img src={require(`../uploads/${props.image.name}`)} />  
                 <div className='movie-details'>
                     <div className='movie-info'>
                         <div className='movie-name'>{props.title}</div>

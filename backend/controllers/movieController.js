@@ -56,6 +56,7 @@ const createMovie = async (req, res) => {
         dateAndTimeOfProjection: req.body.dateAndTimeOfProjection,
         durationH: req.body.durationH,
         durationM: req.body.durationM,
+        price:req.body.price,
         image: {
           data: req.file.filename,
           contentType: 'image/png',

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import MoviePage from './pages/MoviePage';
+import OrderPage from './pages/OrderPage'
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,6 +20,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies/:id" element={<MoviePage />} />
+        <Route path="/order" element={<OrderPage />} />
+
+
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,55 @@
+
+.order-movie img{
+    height: 11rem;
+    width: 16rem;
+}
+
+.order-movie{
+    margin:5rem 0rem 0rem 10rem;
+    display: flex;
+}
+
+.o-title{
+    font-family: 'Ysabeau';
+    font-variant: all-petite-caps;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.details{
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+.ticket-number{
+    display: flex;
+    padding-top: 2rem;
+}
+
+.ticket-number div{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-number button{
+    border: 0;
+    border-radius: 5px;
+    width: 2.4rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-drink {
+    width: 29rem;
+    margin-top: 6rem;
+    margin-left: 10rem;
+}
+
+.cont1{
+    display: flex;
+    width: 63rem;
+}

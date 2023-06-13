@@ -36,7 +36,7 @@ export default function MoviePage(props) {
                 <p><strong>Director: </strong>{movie.director}</p>
                 <p><strong>Cast: </strong>{movie.cast}</p>
                 <p><strong>Duration: </strong>{movie.durationH}h {movie.durationM}min</p>
-                <Link to={`/movies/${props._id}`} >
+                <Link to="/order" state={movie}>
                     <div className='watchbttn'>
                         <button><strong>Projection: </strong>{movie.dateAndTimeOfProjection}</button>
                     </div>

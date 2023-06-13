@@ -31,6 +31,10 @@ const movieSchema = new Schema({
     data: Buffer,
     contentType: String,
     name: String
+  }, 
+  price: {
+    type: Number,
+    required: true
   }
 }, { timestamps: true })
 

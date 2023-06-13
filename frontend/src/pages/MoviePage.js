@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import '../styles/MovieDetails.css';
+import { Link } from 'react-router-dom'
+
+
 
 export default function MoviePage(props) {
 
@@ -24,10 +28,19 @@ export default function MoviePage(props) {
 
 
 
+
     return (
         <div className="moviedetails">
             <div>
-                <div>{movie.title}</div>
+                <h4>{movie.title}</h4>
+                <p><strong>Director: </strong>{movie.director}</p>
+                <p><strong>Cast: </strong>{movie.cast}</p>
+                <p><strong>Duration: </strong>{movie.durationH}h {movie.durationM}min</p>
+                <Link to={`/movies/${props._id}`} >
+                    <div className='watchbttn'>
+                        <button><strong>Projection: </strong>{movie.dateAndTimeOfProjection}</button>
+                    </div>
+                </Link>
             </div>
         </div>
     )

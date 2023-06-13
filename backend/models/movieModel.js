@@ -16,7 +16,7 @@ const movieSchema = new Schema({
     required: true
   },
   dateAndTimeOfProjection: {
-    type: Date,
+    type: String,
     required: true
   },
   durationH: {
@@ -28,10 +28,10 @@ const movieSchema = new Schema({
     required: true
   },
   image: {
-    data:Buffer,
+    data: Buffer,
     contentType: String,
-    name:String
-    }
+    name: String
+  }
 }, { timestamps: true })
 
 module.exports = mongoose.model('Movie', movieSchema)

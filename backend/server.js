@@ -2,10 +2,12 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
-const multer=require('multer')
+const multer = require('multer')
 const movieRoutes = require('./routes/movie')
 const orderRoutes = require('./routes/order')
-const cors= require('cors');
+const userRoutes = require('./routes/user')
+
+const cors = require('cors');
 const path = require('path');
 
 
@@ -30,6 +32,8 @@ app.use((req, res, next) => {
 // routes
 app.use('/movies', movieRoutes)
 app.use('/order', orderRoutes)
+app.use('/api/user', userRoutes)
+
 
 
 // connect to db

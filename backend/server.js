@@ -2,15 +2,13 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
-const multer = require('multer')
+// const multer = require('multer')
 const movieRoutes = require('./routes/movie')
 const orderRoutes = require('./routes/order')
 const userRoutes = require('./routes/user')
 
 const cors = require('cors');
 const path = require('path');
-
-
 
 // express app
 const app = express()

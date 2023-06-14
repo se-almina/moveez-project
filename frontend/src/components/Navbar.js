@@ -1,19 +1,43 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import { BsFillPersonFill } from "react-icons/bs";
+import { Link } from 'react-router-dom'
+import { useLogout } from '../hooks/useLogout'
+import { useAuthContext } from '../hooks/useAuthContext'
 
-export default function Navbar() {
+
+
+const Navbar = () => {
+    const { logout } = useLogout()
+    const { user } = useAuthContext()
+
+
+    const handleClick = () => {
+        logout()
+    }
+
     return (
-        <div className='navbar'>
-            <div className='container'>
-                <div className='name'>MOVEEZ</div>
-                <div>
-                    <form>
-                        <input type='text' placeholder='Search'></input>
-                    </form>
-                </div>
+        <header>
+            <div className="container">
+                <Link to="/">
+                    <h1>MOVEEZ</h1>
+                </Link>
+                <nav>
+                    {user && (
+                        <div>
+                            <span>{user.email}</span>
+                            <button onClick={handleClick}>Log out</button>
+                        </div>
+                    )}
+                    {!user && (
+                        <div>
+                            <Link to="/login">Login</Link>
+                            <Link to="/signup">Signup</Link>
+                        </div>
+                    )}
+                </nav>
             </div>
-            <div className='profile'><BsFillPersonFill /></div>
-        </div>
+        </header>
     )
 }
+
+export default Navbar

@@ -2,6 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 import MoviePage from './pages/MoviePage';
 import OrderPage from './pages/OrderPage'
 import {
@@ -21,8 +23,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/order" element={<OrderPage />} />
-
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </div>

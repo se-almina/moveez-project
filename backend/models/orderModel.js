@@ -5,14 +5,14 @@ const Schema = mongoose.Schema
 const orderSchema = new Schema({
   movietitle: {
     type: String,
-    required: true
+    
   },
   ticketNumber: {
     type: Number,
     required: true
   },
   foodandDrink: {
-    type: String,
+    type: Array,
     required: true
   },
   dateAndTimeOfProjection: {

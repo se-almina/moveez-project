@@ -4,9 +4,9 @@ import '../styles/Footer.css';
 export default function Footer() {
     return (
         <footer>
-            <div class="footer">
+            <div className="footer">
 
-                <div class="row">
+                <div className="row">
                     <p>Moveez Software Engineering Project built using MERN stack!</p>
                     <ul>
                         <li><a href="#">Contact us</a></li>

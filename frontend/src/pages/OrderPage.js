@@ -51,6 +51,40 @@ export default function OrderPage() {
         console.log(movie.price)
     }
 
+
+
+    const createOrder = async () => {
+        const url = 'https://moveez-r9ei.onrender.com/order'; // Replace with the actual API endpoint URL
+      
+        const orderData = {
+            movietitle: movie.title,
+            ticketNumber:ticketNumber,
+            foodandDrink:selectedOptions,
+            dateAndTimeOfProjection: movie.dateAndTimeOfProjection,
+            price:movie.price
+        };
+      
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderData),
+          });
+      
+          if (response.ok) {
+            const order = await response.json();
+            console.log('Order created:', order);
+          } else {
+            const error = await response.json();
+            console.error('Failed to create order:', error);
+          }
+        } catch (error) {
+          console.error('Failed to create order:', error);
+        }
+      };
+
     return (
         <div>
             <div className="order-movie">
@@ -82,7 +116,7 @@ export default function OrderPage() {
                     isMulti
                 />
             </div>
+            <div><button onClick={createOrder}></button></div>
         </div>
     )
-
-}
+    }

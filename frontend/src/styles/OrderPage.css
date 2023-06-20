@@ -53,3 +53,15 @@
     display: flex;
     width: 63rem;
 }
+
+.order-now{
+    display: flex;
+    position: absolute;
+    right: 13rem;
+}
+
+.order-now button{
+border: 0;
+width: 8rem;
+height: 2rem;
+}

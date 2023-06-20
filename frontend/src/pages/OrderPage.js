@@ -116,7 +116,7 @@ export default function OrderPage() {
                     isMulti
                 />
             </div>
-            <div><button onClick={createOrder}></button></div>
+            <div className='order-now'><button  onClick={createOrder}>Order now</button></div>
         </div>
     )
     }

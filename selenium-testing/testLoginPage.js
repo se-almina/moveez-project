@@ -5,7 +5,7 @@ async function runTest() {
 
     try {
         await driver.manage().window().maximize();
-        await driver.get('http://localhost:3001/'); // Replace with your app's URL
+        await driver.get('https://moveez-project.netlify.app/'); // Replace with your app's URL
 
         await driver.wait(until.elementLocated(By.css('#root > div > header > div > a > h1')), 5000).click();
 

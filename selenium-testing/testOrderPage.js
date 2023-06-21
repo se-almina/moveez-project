@@ -1,11 +1,11 @@
-const { Builder, By, until} = require('selenium-webdriver');
+const { Builder, By, until } = require('selenium-webdriver');
 
 async function runTest() {
-  let driver = await new Builder().forBrowser('chrome').build(); 
+  let driver = await new Builder().forBrowser('chrome').build();
 
   try {
     await driver.manage().window().maximize();
-    await driver.get('http://localhost:3001/'); 
+    await driver.get('https://moveez-project.netlify.app/');
 
     await driver.wait(until.elementLocated(By.xpath('//*[@id="root"]/div/div/div[1]/div/div/a/div/button')), 5000).click();
 
